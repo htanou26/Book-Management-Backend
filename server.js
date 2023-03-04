@@ -10,8 +10,6 @@ const categoryRoutes = require("./routes/categoryRoutes");
 const visitRoute = require("./routes/visitRoute")
 const errorHandler = require("./middleWare/errorMiddleware");
 const cookieParser = require("cookie-parser");
-const path = require("path");
-
 const app = express();
 
 // Middlewares
@@ -26,7 +24,6 @@ app.use(
   })
 );
 
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Routes Middleware
 app.use("/api/users", userRoute);
